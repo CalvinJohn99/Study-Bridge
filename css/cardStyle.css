@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    padding-top: 65px;
+    background-image: url(../images/cardbg.jpg);
+    background-size: cover;
+}
+
+.banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: 65px;
+    background-color: #F2F2F2;
+}
+
+.banner li, .controls li {
+    list-style: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 65px;
+}
+
+#title {
+    font-size: 20pt;
+    text-align: center;
+}
+
+.lobbies {
+    display: flex;
+    text-align: center;
+    justify-content: flex-start;
+    width: 100vw;
+    height: 80vh;
+}
+
+.lobbies li {
+    list-style: none;
+}
+
+#lobby {
+    margin-top: 40px;
+    margin-left: 100px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    border-style: solid;
+    border-width: 8px;
+    border-color:#BF9000;
+    background-color: #FFF3CD;
+    border-radius: 14px;
+    width: 350px;
+    height: 80vh;
+    line-height: 60px;
+}
+
+#button {
+    text-decoration: none;
+    padding: 10px 15px 10px 15px;
+    border-radius: 14px;
+    color: white;
+    background-color: #502583;
+}
+
+#notButton {
+    text-decoration: none;
+    padding: 10px 15px 10px 15px;
+    border-radius: 14px;
+    color: white;
+    background-color: #404040;
+}
+
+.users {
+    display: grid;
+    grid-template-columns: 160px 160px;
+}
+
+.users img {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    width:100px;
+}
+
+.users iframe {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+#smallGIF {
+    padding-top: 0px;
+    padding-left: 20px;
+}

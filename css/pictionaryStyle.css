@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    padding-top: 65px;
+    background-image: url(../images/paintbg.jpg);
+    background-size: cover;
+}
+
+.banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: 65px;
+    background-color: #F2F2F2;
+}
+
+.banner li, .controls li {
+    list-style: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 65px;
+}
+
+#mic {
+    position: fixed;
+    top: 5px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#mic img {
+    width: 80px;
+}
+
+.controls {
+    display: flex;
+    text-align: center;
+    justify-content: flex-end;
+    width: 20vw;
+    height: 65px;
+}
+
+.mainLayout {
+    margin-top: 65px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.mainLayout div {
+    width: 30vw;
+}
+
+#board {
+    background-color: #D9DDF7;
+    border-style: solid;
+    border-width: 8px;
+    border-color:#5568D9;
+    border-radius: 14px;
+    height: 80vh;
+    line-height: 60px;
+    text-align: left;
+    width: 600px;
+    z-index: 0;
+}
+
+#cas{
+    width: 600px;
+    height: 400px;
+    background-color: white;
+}
+
+.select {
+    display: flex;
+    margin-left: 20px;
+}
+
+.select img{
+    padding-top: 10px;
+    width: 40px;
+    height: 40px;
+}
+
+#size {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.select input {
+    margin-top: 12px;
+    margin-right: 5px;
+}
+
+.controls img {
+    height: 65px;
+}
+
+#title {
+    font-size: 20pt;
+    text-align: center;
+}
+
+#guessers {
+    font-size: 16pt;
+    text-align: center;
+}
+
+.correct {
+    background-color: #96D040;
+}
+
+.lobbies {
+    display: flex;
+    text-align: center;
+    justify-content: flex-start;
+    width: 100vw;
+    height: 80vh;
+}
+
+.lobbies li {
+    list-style: none;
+}
+
+#lobby {
+    margin-top: 40px;
+    margin-left: 100px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    border-style: solid;
+    border-width: 8px;
+    border-color:#5568D9;
+    background-color: #D9DDF7;
+    border-radius: 14px;
+    width: 350px;
+    height: 80vh;
+    line-height: 60px;
+}
+
+#button, .button {
+    text-decoration: none;
+    padding: 10px 15px 10px 15px;
+    border-radius: 14px;
+    color: white;
+    background-color: #502583;
+}
+
+#notButton {
+    text-decoration: none;
+    padding: 10px 15px 10px 15px;
+    border-radius: 14px;
+    color: white;
+    background-color: #404040;
+}
+
+.users {
+    display: grid;
+    grid-template-columns: 160px 160px;
+}
+
+.users img {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    width:100px;
+}
+
+.users iframe {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+#smallGIF {
+    padding-top: 0px;
+    padding-left: 20px;
+}
+
+#videos img {
+    width: 200px;
+}
+
+#videos p {
+    color: white;
+    padding-top: 15px;
+    padding-bottom: 60px;
+    font-size: 18pt;
+}
+
+#reactions {
+    padding: 40px;
+    background-color: #D9DDF7;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-style: solid;
+    border-width: 8px;
+    border-color:#5568D9;
+    border-radius: 14px;
+    width: 400px;
+    font-size: 40pt;
+    z-index: 4;
+}
+
+#reactions a {
+    text-decoration: none;
+}
+
+#respond {
+    line-height: 40px;
+    padding-left: 20px;
+}
+
+#newGame {
+    padding: 40px;
+    background-color: #D9DDF7;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-style: solid;
+    border-width: 8px;
+    border-color:#5568D9;
+    border-radius: 14px;
+    width: 300px;
+    text-align: center;
+    line-height: 50px;
+    z-index: 2;
+}
+
+#webCam {
+    background-color: black;
+    border-radius: 300px;
+    border: 3px solid blueviolet;
+    width: 269px;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+#canvas {
+    display: none;
+}

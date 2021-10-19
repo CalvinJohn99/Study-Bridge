@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Teaching Space A</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet"> 
+		<link rel="stylesheet" href="css/tutorialStyle.css">
+		<script type="text/javascript" 
+            src="https://unpkg.com/webcam-easy/dist/webcam-easy.min.js">
+        </script>		
+	</head>
+
+    <body>
+		<div id = "tutor">
+			<div class = "info">
+			<h1>Trent Smith</h1>
+			<p>Tutor</p>
+			</div>
+			<img src="images/vid3.gif" alt = "tutorPicture">
+		</div>
+
+		<section id="reactions" class="hide">
+            <p><a id="rHeart" href=#>&#128156</a> &nbsp; <a id="rClap" href=#>&#128079</a>
+                &nbsp; <a id="rLike" href=#>&#128077</a> &nbsp; <a id="rDislike" href=#>&#128078</a></p>
+        </section>
+
+		<section id="textField" class="hide">
+            <p>Please put your question: &nbsp; <input type="text" name="question"> &nbsp; <a id="button" class="show" href=#>SUBMIT</a>
+			</p>
+        </section>
+
+		<section id="currency" class="hide">
+            <p>You earned 4 Currency from this session to spend in the Reward Store!</p>
+        </section>
+
+		<section id="mainContent">
+			<div>
+				<div id = "head3">
+					<div class = "imagetext">
+						<video id="webCam1" autoplay playsinlne width="170" height="130"></video>
+						<p id="name">Alex Citizen</p>
+					</div>
+					<div class = "imagetext">
+						<img src="images/test2.gif" alt = "headPicture">
+						<p>Molly James</p>
+					</div>
+					<div class = "imagetext">
+						<img src="images/vid1.gif" alt = "headPicture">
+						<p>Alice Smith</p>
+					</div>
+					<div class = "imagetext">
+						<img src="images/test3.gif" alt = "headPicture">
+						<p>Mark Jones</p>
+					</div>	
+				</div>
+			</div>
+
+			<div>
+				<img class="middleImg" src="images/share.jpg">
+			</div>
+			<div>
+				<div id = "head4">
+					<div class = "imagetext">
+						<img src="images/test7.gif" alt = "headPicture">
+						<p>Zelda Norman</p>
+					</div>
+					<div class = "imagetext">
+						<img src="images/vid2.gif" alt = "headPicture">
+						<p>Olive Curtis</p>
+					</div>
+				
+					<div class = "imagetext">
+						<img src="images/test5.gif" alt = "headPicture">
+						<p>Cara Parks</p>
+					</div>
+				
+					<div class = "imagetext">
+						<img src="images/more.png" alt = "more">
+						<p>2 More</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div class="banner2">
+			<a class="div-inline" href=tutorial.html><img src="images/stopscreen.png"></a>
+			<a id="openAsk" href=#><img src="images/ask.png"></a>
+			<a id="openHand" href=#><img src="images/raisehand.png"></a>
+					
+			<a id="micOff" class="show" href=#><img src="images/micOff.png"></a>
+			<a id="micOn" class="hide" href=#><img src="images/micOn.png"></a>
+
+			<a id="videoToggle" class="div-inline" href=#><img src="images/stopvideo.png"></a>
+			<a id="openReactions" class="div-inline" href=#><img src="images/reactions.png"></a>
+			<a id="openCurrency" class="div-inline" href="index.html"><img src="images/leave.png"></a>
+		</div>
+
+		<script>
+			const webCamElement = document.getElementById("webCam1");
+			const canvasElement = document.getElementById("canvas");
+			const webcam = new Webcam(webCamElement, "user", canvasElement);
+			webcam.start();
+		</script>
+
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/tutorialScript.js"></script>
+		<script src="js/storyScript.js"></script>
+    </body>
+</html>

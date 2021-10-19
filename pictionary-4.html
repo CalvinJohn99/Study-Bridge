@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Pictionary - Lobby B</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet"> 
+		<link rel="stylesheet" href="css/pictionaryStyle.css">
+        <script type="text/javascript" 
+            src="https://unpkg.com/webcam-easy/dist/webcam-easy.min.js">
+        </script>
+	</head>
+
+    <body>
+
+		<header>
+			<ul class="banner">
+				<li>
+					<p id="title">&#127912 Pictionary - Lobby B</p>
+				</li>
+				<li>
+					<ul class="controls">
+                        <li>
+                            <a id="videoToggle" href=#><img src="images/stopvideo.png"></a>
+                        </li>
+                        <li>
+                            <a id="openReactions" href=#><img src="images/reactions.png"></a>
+                        </li>
+                        <li>
+                            <a href="pictionary.html"><img src="images/leavelobby.png"></a>
+                        </li>
+                    </ul>
+				</li>
+			</ul>
+
+            <div id="mic">
+                <a id="micOff" class="show" href=#><img src="images/micOff.png"></a>
+                <a id="micOn" class="hide" href=#><img src="images/micOn.png"></a>
+            </div>
+        </header>
+
+        <section id="reactions" class="hide">
+            <p><a id="rHeart" href=#>&#128156</a> &nbsp; <a id="rClap" href=#>&#128079</a>
+                &nbsp; <a id="rLike" href=#>&#128077</a> &nbsp; <a id="rDislike" href=#>&#128078</a></p>
+        </section>
+
+        <section id="newGame" class="hide">
+            <p id="title">Round Complete!</p>
+            <p><a id="button" href="pictionary-1.html">NEW ROUND</a></p>
+            <p><a id="button" href="pictionary.html">LEAVE LOBBY</a></p>
+        </section>
+
+        <section class="mainLayout">
+            <div id="videos">
+                <div>
+                    <video id="webCam" autoplay playsinlne width="200" height="200"></video>
+                    <canvas id="canvas"></canvas>
+                </div>
+                <p id="name">Alex Citizen</p>
+				<iframe src="https://giphy.com/embed/ycepcoDdWjpY8frqYd" width="200" height="200"
+                    frameBorder="0" class="giphy-embed" allowFullScreen>
+                </iframe>
+                <p>Olive Green</p>
+            </div>
+            <div id="board">
+                <p id="title">Alice's Turn &nbsp;&nbsp;&nbsp;</p>
+                <video width="600" height="450" autoplay>
+                    <source src="images/pict3.mp4" type=video/mp4>
+                  </video>
+                <div id="respond">
+                    <form name="boardForm">
+                        Guess the Word: <input type="text" name="answer"> <a id="button" class="submit3" href=#>SUBMIT</a>
+                    </form>
+                    <p id="response"></p>
+                </div>
+            </div>
+            <div id="videos">
+                <iframe src="https://giphy.com/embed/VEkUdvZtZtuNLEpj04" width="200" height="200" frameBorder="0"
+                    class="giphy-embed" allowFullScreen>
+                </iframe>
+                <p>Mary Jones</p>
+                <iframe id="smallGIF" src="https://giphy.com/embed/wnyIHIzVyOmTVfkpnH" width="250" height="250" 
+                    frameBorder="0" class="giphy-embed" allowFullScreen>
+                </iframe>
+                <p>Alice Parks</p>
+            </div>
+        </section>
+
+        <script>
+            const webCamElement = document.getElementById("webCam");
+            const canvasElement = document.getElementById("canvas");
+            const webcam = new Webcam(webCamElement, "user", canvasElement);
+            webcam.start();
+        </script>
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/pictionaryScript.js"></script>
+    </body>
+
+</html>

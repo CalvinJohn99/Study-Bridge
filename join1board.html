@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Social Table 1</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet"> 
+		<link rel="stylesheet" href="css/socialTableStyle.css">
+        <script type="text/javascript" 
+            src="https://unpkg.com/webcam-easy/dist/webcam-easy.min.js">
+        </script>
+		<script
+			src="https://www.whiteboard.team/dist/api.js">
+		</script>
+	
+	</head>
+
+    
+	<body>
+		<section id="reactions" class="hide">
+            <p><a id="rHeart" href=#>&#128156</a> &nbsp; <a id="rClap" href=#>&#128079</a>
+                &nbsp; <a id="rLike" href=#>&#128077</a> &nbsp; <a id="rDislike" href=#>&#128078</a></p>
+        </section>		
+			
+		<div id = "socialTableSpace">
+			<div class="facecambox">
+                <video id="webCam" autoplay playsinlne width="269" height="200"></video>
+				<p id="name">Alex Citizen</p>
+			</div>
+
+			<div id="board">
+				<div style="width: 1000px; height: 600px;" id="wt-container"></div>
+			</div>
+
+			<div class="bottomNav">
+				<a class="div-inline" href=join1share.html><img src="images/sharescreen.png"></a>
+				<a id="div-whiteboard" href="join1.html"><img src="images/stopboard.png"></a>
+				<a id="div-upload"><img src="images/upload.png"></a>
+				<a id="micOff" class="show" href=#><img src="images/micOff.png"></a>
+				<a id="micOn" class="hide" href=#><img src="images/micOn.png"></a>	
+				<a id="videoToggle" class="div-inline" href=#><img src="images/stopvideo.png"></a>
+				<a id="openReactions" class="div-inline" href=#><img src="images/reactions.png"></a>
+				<a class="div-inline" href="index.html"><img src="images/leavetable.png"></a>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+            var wt = new api.WhiteboardTeam('#wt-container', {
+                clientId: '63d3cbfd90ea648160b51f2e44fd6f6f',
+                boardCode: '1db9092a-288a-11ec-9621-0242ac130002',
+                board: {
+                    tool: 'pen'
+                },
+            });
+            wt.removeCommand(commands);
+        </script>
+
+		<script>
+			const webCamElement = document.getElementById("webCam");
+			const canvasElement = document.getElementById("canvas");
+			const webcam = new Webcam(webCamElement, "user", canvasElement);
+			webcam.start();
+		</script>
+
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/tutorialScript.js"></script>
+		<script src="js/storyScript.js"></script>
+	</body>
+</html>

@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Pictionary - Lobby B</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet"> 
+		<link rel="stylesheet" href="css/pictionaryStyle.css">
+        <script type="text/javascript" 
+            src="https://unpkg.com/webcam-easy/dist/webcam-easy.min.js">
+        </script>
+	</head>
+
+    <body>
+
+		<header>
+			<ul class="banner">
+				<li>
+					<p id="title">&#127912 Pictionary - Lobby B</p>
+				</li>
+				<li>
+					<ul class="controls">
+                        <li>
+                            <a id="videoToggle" href=#><img src="images/stopvideo.png"></a>
+                        </li>
+                        <li>
+                            <a id="openReactions" href=#><img src="images/reactions.png"></a>
+                        </li>
+                        <li>
+                            <a href="pictionary.html"><img src="images/leavelobby.png"></a>
+                        </li>
+                    </ul>
+				</li>
+			</ul>
+
+            <div id="mic">
+                <a id="micOff" class="show" href=#><img src="images/micOff.png"></a>
+                <a id="micOn" class="hide" href=#><img src="images/micOn.png"></a>
+            </div>
+        </header>
+
+        <section id="reactions" class="hide">
+            <p><a id="rHeart" href=#>&#128156</a> &nbsp; <a id="rClap" href=#>&#128079</a>
+                &nbsp; <a id="rLike" href=#>&#128077</a> &nbsp; <a id="rDislike" href=#>&#128078</a></p>
+        </section>
+
+        <section class="mainLayout">
+            <div id="videos">
+                <div>
+                    <video id="webCam" autoplay playsinlne width="200" height="200"></video>
+                    <canvas id="canvas"></canvas>
+                </div>
+                <p id="name">Alex Citizen</p>
+				<iframe src="https://giphy.com/embed/ycepcoDdWjpY8frqYd" width="200" height="200"
+                    frameBorder="0" class="giphy-embed" allowFullScreen>
+                </iframe>
+                <p>Olive Green</p>
+            </div>
+            <div id="board">
+                <p id="title">Your Turn, Draw a 'Cat' &nbsp;&nbsp;&nbsp;</p>
+                <p id="guessers">Olive, Mary and Alice are Guessing... &nbsp;&nbsp;&nbsp;</p>
+                <div id="cas">
+                    <canvas id="cs" width="600" height="400"></canvas>
+                </div>
+                <div class="select">
+                    <input type="color" name="" id="cl" value="" />
+                    <img src="images/thinBrush.jpg" alt="thin"  onclick="secwidth(1,this,'Thin')" >
+                    <img src="images/mediumBrush.jpg" alt="medium" onclick="secwidth(5,this,'Medium')" >
+                    <img src="images/thickBrush.jpg" alt="thick" onclick="secwidth(10,this,'Thick')" >
+                    <p id="size">Thin</p>
+                    <p><a class="button" id="clearcanvas" href=#>CLEAR</a></p>
+                </div>
+            </div>
+            <div id="videos">
+                <iframe src="https://giphy.com/embed/VEkUdvZtZtuNLEpj04" width="200" height="200" frameBorder="0"
+                    class="giphy-embed" allowFullScreen>
+                </iframe>
+                <p>Mary Jones</p>
+                <iframe id="smallGIF" src="https://giphy.com/embed/wnyIHIzVyOmTVfkpnH" width="250" height="250" 
+                    frameBorder="0" class="giphy-embed" allowFullScreen>
+                </iframe>
+                <p>Alice Parks</p>
+            </div>
+        </section>
+
+        <script>
+            //Webcam
+            const webCamElement = document.getElementById("webCam");
+            const canvasElement = document.getElementById("canvas");
+            const webcam = new Webcam(webCamElement, "user", canvasElement);
+            webcam.start();
+
+            //Canvas
+            var canvas = document.getElementById("cs");
+            var context = canvas.getContext("2d");
+            
+            var imgchoose;
+            function secwidth(width,ele,text){
+                document.getElementById("size").innerHTML=text;
+                ele.style.backgtoundColor="rgb(251, 251, 251)";
+                context.lineWidth=width;
+                imgchoose=ele;
+            }
+
+            var isDraw=false;
+            canvas.onmousedown=startDraw;
+            canvas.onmouseout=stopDraw;
+            canvas.onmousemove=draw;
+            canvas.onmouseup=stopDraw;
+
+            function startDraw(e){
+            isDraw=true;
+            context.beginPath();
+            context.strokeStyle=document.getElementById("cl").value;
+            context.moveTo(e.pageX-canvas.offsetLeft,e.pageY-canvas.offsetTop);
+            }
+            function draw(e){
+            if(isDraw){
+                var x=e.pageX-canvas.offsetLeft;
+                var y=e.pageY-canvas.offsetTop;
+                context.lineTo(x,y);
+                
+                context.stroke();
+                }
+            }
+            function stopDraw(){
+            isDraw=false;
+            }
+            
+            function savecs(){         
+            }
+            document.getElementById("clearcanvas").onclick=clearcs;
+            function clearcs(){
+            context.clearRect(0,0,canvas.width,canvas.height);
+            }
+        </script>
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/pictionaryScript.js"></script>
+    </body>
+
+</html>

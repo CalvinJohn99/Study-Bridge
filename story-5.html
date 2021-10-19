@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>The Mysterious Well</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet"> 
+		<link rel="stylesheet" href="css/storyStyle.css">
+        <script type="text/javascript" 
+            src="https://unpkg.com/webcam-easy/dist/webcam-easy.min.js">
+        </script>
+	</head>
+
+    <body>
+
+		<header>
+			<ul class="banner">
+				<li>
+					<p id="title">&#128214 The Mysterious Well</p>
+				</li>
+				<li>
+					<ul class="controls">
+                        <li>
+                            <a id="videoToggle" href=#><img src="images/stopvideo.png"></a>
+                        </li>
+                        <li>
+                            <a id="openReactions" href=#><img src="images/reactions.png"></a>
+                        </li>
+                        <li>
+                            <a href="story.html"><img src="images/leavelobby.png"></a>
+                        </li>
+                    </ul>
+				</li>
+			</ul>
+
+            <div id="mic">
+                <a id="micOff" class="show" href=#><img src="images/micOff.png"></a>
+                <a id="micOn" class="hide" href=#><img src="images/micOn.png"></a>
+            </div>
+        </header>
+
+        <section id="reactions" class="hide">
+            <p><a id="rHeart" href=#>&#128156</a> &nbsp; <a id="rClap" href=#>&#128079</a>
+                &nbsp; <a id="rLike" href=#>&#128077</a> &nbsp; <a id="rDislike" href=#>&#128078</a></p>
+        </section>
+
+        <section class="storyLayout">
+            <div id="videos">
+                <div>
+                    <video id="webCam" autoplay playsinlne width="200" height="200"></video>
+                    <canvas id="canvas"></canvas>
+                </div>
+                <p id="name">Alex Citizen</p>
+				<iframe src="https://giphy.com/embed/W0bO9ALL0fhyMc4qsw" width="250" height="250"
+                    frameBorder="0" class="giphy-embed" allowFullScreen>
+                </iframe>
+                <p>Daisy Price</p>
+            </div>
+            <div id="stories">
+                <p id="title">Page 5 &nbsp;&nbsp;&nbsp;</p>
+                <p id="storyText">As you lean over to shine your light into the pit, something gives you a sudden push from behind, sending you plummeting
+                    down into the depths of the well. They never did find the body.
+                </p>
+                <a id="button" href="story-select.html">RETURN TO STORY SELECT</a>
+            </div>
+            <div id="videos">
+                <iframe src="https://giphy.com/embed/2SwBygxG2Lz4YnyPR3" width="250" height="250" frameBorder="0" 
+                    class="giphy-embed" allowFullScreen>
+                </iframe>
+                <p>John Smith</p>
+            </div>
+        </section>
+
+        <script>
+            const webCamElement = document.getElementById("webCam");
+            const canvasElement = document.getElementById("canvas");
+            const webcam = new Webcam(webCamElement, "user", canvasElement);
+            webcam.start();
+        </script>
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/storyScript.js"></script>
+    </body>
+
+</html>

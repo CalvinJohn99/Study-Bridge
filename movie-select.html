@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Movie Space - Lobby A</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet"> 
+		<link rel="stylesheet" href="css/movieStyle.css">
+        <script type="text/javascript" 
+            src="https://unpkg.com/webcam-easy/dist/webcam-easy.min.js">
+        </script>
+	</head>
+
+    <body>
+
+		<header>
+			<ul class="banner">
+				<li>
+					<p id="title">&#127909; Movie Space - Lobby A</p>
+				</li>
+				<li>
+					<ul class="controls">
+                        <li>
+                            <a id="videoToggle" href=#><img src="images/stopvideo.png"></a>
+                        </li>
+                        <li>
+                            <a id="openReactions" href=#><img src="images/reactions.png"></a>
+                        </li>
+                        <li>
+                            <a href="movie.html"><img src="images/leavelobby.png"></a>
+                        </li>
+                    </ul>
+				</li>
+			</ul>
+
+            <div id="mic">
+                <a id="micOff" class="show" href=#><img src="images/micOff.png"></a>
+                <a id="micOn" class="hide" href=#><img src="images/micOn.png"></a>
+            </div>
+        </header>
+
+        <section id="reactions" class="hide">
+            <p><a id="rHeart" href=#>&#128156</a> &nbsp; <a id="rClap" href=#>&#128079</a>
+                &nbsp; <a id="rLike" href=#>&#128077</a> &nbsp; <a id="rDislike" href=#>&#128078</a></p>
+        </section>
+
+        <section class="background-space">
+           <div class="facecambox">
+                <video id="webCam" autoplay playsinlne width="269" height="200"></video>
+                <canvas id="canvas"></canvas>
+                <p id="name">Alex Citizen</p>
+            </div>
+            <div class="scroll-bg">
+                <div class="scroll-div">
+                    <div class="scroll-object">
+                        <a href="moviInfo.html">
+                            <div class="movie a">
+                                    <img width="400" height="600" src="images/couple.jpg" alt="Happy Campers">
+                                Happy Campers
+                            </div>
+                        </a>
+                        <div class="movie b">
+                            <img width="400" height="600" src="images/joker.jpg" alt="Joker">
+                            LOCKED[Joker]
+                        </div>
+                        <div class="movie c">
+                            <img width="400" height="600" src="images/vintage.jpg" alt="Vintage">
+                            LOCKED[What's This]
+                        </div>
+                    </div>
+                </div>
+                <div class="down-arrow">
+                    &#65088;
+                </div>
+            </div>
+            <div class="avatara">
+                <iframe src="https://giphy.com/embed/mCmqR754ylMBaLN3B5" 
+                    width="215" height="240" frameBorder="0" 
+                    class="giphy-embed" allowFullScreen></iframe>
+                <p class="name">Anne Paul</p>
+            </div>
+ 
+            <div class="avatarb">
+                <iframe src="https://giphy.com/embed/ycepcoDdWjpY8frqYd" 
+                width="200" height="240" frameBorder="0" 
+                class="giphy-embed" allowFullScreen></iframe>
+                <p class="name">Emily Sue</p>
+            </div>
+            <div class="avatarc">
+                <iframe src="https://giphy.com/embed/5ziMNsbfYfxCSoRnrb" 
+                width="213" height="240" 
+                frameBorder="0" class="giphy-embed" 
+                allowFullScreen></iframe>
+                <p class="name">Jake Hopkins</p>
+            </div>
+        </section>
+
+        <script>
+            const webCamElement = document.getElementById("webCam");
+            const canvasElement = document.getElementById("canvas");
+            const webcam = new Webcam(webCamElement, "user", canvasElement);
+            webcam.start();
+        </script>
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/storyScript.js"></script>
+    </body>
+
+</html>

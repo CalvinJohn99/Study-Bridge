@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>DECO3500 Hub</title>
+        <link rel="stylesheet" href="css/hubStyle.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="grass">
+            <div class="left">
+                <h2>Courses</h2>
+                <div class="navigation">
+                    <ul class="nav">
+                        <ul>
+                            <li>
+                                <p id="activatedPage">DECO3500</p>
+                            </li>                        
+                            <li class="non-active">
+                                <a id="DECO3801" href=# title="DECO3801">DECO3801</a>
+                            </li>
+                            <li class="non-active">
+                                <a id="CSSE3003" href=# title="CSSE3003">CSSE3003</a>
+                            </li>
+                            <li class="non-active">
+                                <a id="INFS1200" href=# title="INFS1200">INFS1200</a>
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+
+                <h2>Resources</h2>
+                <div class="navigation">
+                    <ul class="nav">
+                        <ul>
+                            <li class="non-active">
+                                <a id="lecture" href=# title="lecture">Lecture (Zoom)</a>
+                            </li>
+                            <li class="non-active">
+                                <a id="blackboard" href=# title="blackboard">Blackboard</a>
+                            </li>
+                            <li class="non-active">
+                                <a class="non-active" href="friends.html" title="friends">Friends</a>
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+                <div class="nav-bottom">
+                    <ul>
+                        <li>
+                            <a href="rewards.html" title="rewards"><img src="images/rewards.png">Reward Store</a>
+                        </li>
+                        <li>
+                            <a href="profile.html"  title="profile"><img src="images/jane.png"> Alex Citizen</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+            
+            <div class="right">
+                <div class="teaching-space">
+                    <h2 class="ts">Teaching Space A</h2>
+                    <div class="studentName">
+                        <h2>T04 - Jenny</h2>
+                        <p>8 Students</p>
+                    </div>
+                    <div class="session">
+                        <a class="button" href="tutorial.html">JOIN SESSION</a>
+                    </div>
+                </div>
+                <div class="teaching-space">
+                    <h2 class="ts">Teaching Space B</h2>
+                    <div class="schedule">
+                        <div id="overlay" onclick="off()">
+                            <div id="text">
+                                <h2>Teaching Space B Schedule</h2>
+                                <p>Monday 9:00AM : T02 - John</p>
+                                <p>Monday 3:00AM : T06 - Mary</p>
+                                <p>Wednesday 2:00PM : T08 - Jenny</p>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <p><a onclick="on()" class="button" href=#>SEE SCHEDULE</a></p>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tables">
+                    <h2>Social Tables</h2>
+                    <div id="table1">
+                        <a href="join1.html">JOIN <p>1</p></a>
+                    </div>
+                    <div id="table2">
+                        <a href="join2.html">JOIN <p>2</p></a>
+                        <img id="cam1" src="images/girl7.png">
+                    </div>
+                    <div id="table3">
+                        <a href="join3.html">JOIN <p>3</p></a>
+                        <img id="cam2" src="images/dude2.png">
+                        <img id="cam3" src="images/girl2.png">
+                    </div>
+                    <div id="table4">
+                        <a href="join4.html">JOIN <p>4</p></a>
+                        <img id="cam4" src="images/girl3.png">
+                        <img id="cam5" src="images/dude3.png">
+                        <img id="cam6" src="images/girl6.png">
+                    </div>
+                    <div id="table5">
+                        <a id="fullTable" href="#">FULL <p>5</p></a>
+                        <img id="cam7" src="images/girl5.png">
+                        <img id="cam8" src="images/cammer1.png">
+                        <img id="cam9" src="images/girl8.png">
+                        <img id="cam10" src="images/cammer.png">
+                        <img id="cam11" src="images/girl9.png">
+                        <img id="cam12" src="images/dude6.png">
+                        <img id="cam13" src="images/dude7.png">
+                        <img id="cam14" src="images/dude8.png">
+                    </div>
+                    
+
+                </div>
+                <div class="activities">
+                    <h2>Activities</h2>
+                    <div id="uno">
+                        <a href="card.html">&#127183 CARD GAMES</a>
+                        <p>12 Students</p>
+                    </div>
+                    <div id="pictionary">
+                        <a href="pictionary.html">&#127912 PICTIONARY</a>
+                        <p>11 Students</p>
+                    </div>
+                    <div id="movie">
+                        <a href="movie.html">&#127909 MOVIE SPACE</a>
+                        <p>13 Students</p>
+                    </div>
+                    <div id="story">
+                        <a href="story.html">&#128214 STORY SPACE</a>
+                        <p>11 Students</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/hub.js"></script>
+        <script>
+            function on() {
+              document.getElementById("overlay").style.display = "block";
+              event.preventDefault();
+            }
+            
+            function off() {
+              document.getElementById("overlay").style.display = "none";
+              event.preventDefault();
+            }
+        </script>
+        
+        
+    </body>
+
+</html>
